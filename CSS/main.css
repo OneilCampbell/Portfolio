@@ -40,12 +40,6 @@ hr{
     border-color:black;
 }
 
-@keyframes fluctuate{
-    0%{background-position:25% 75%}
-    50%{background-position:100% 50%}
-    100%{background-position:25% 75%}
-}
-
 .header{
     text-align:center;    
 }
@@ -344,10 +338,87 @@ hr{
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ****************************************************************/
+#about-page{
+    background:#393f50;
+}
+
+.right-words,.left-words{
+    font-size:30px;
+    position: absolute;
+    margin-top:600px;
+}
+
+.left-words{
+    margin-left: 86%;
+}
+
+.word1, .word4{
+    color:turquoise;
+    animation: jump 7s ease-in-out infinite;
+}
+
+.word2, .word5{
+    color:rgb(255, 255, 118);
+    margin-top:850px;
+    animation: jump2 7s ease-in-out infinite;
+}
+
+.word3, .word6{
+    color:pink;
+    margin-top:1050px;
+    animation: jump3 7s ease-in-out infinite;
+}
+
+.word4{
+    color:rgb(253, 182, 49);
+}
+
+.word5{
+    color:rgb(55, 253, 55);
+}
+
+.word6{
+    color:rgb(250, 86, 86);
+}
+
+@keyframes jump{
+    50%{
+        transform: translateY(250px);
+    }
+}
+@keyframes jump2{
+    50%{
+        transform: translateY(-150px);
+    }
+}
+@keyframes jump3{
+    50%{
+        transform: translateY(-450px);
+    }
+}
+
+#about-page-content{
+    background:#19bfe9;
+    width:70%;
+    margin-left:15%;
+    margin-top:50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 2px;
+}
+
+.about-name{
+    color:#ecf572;
+    text-shadow: 2px 2px 2px black;
+    text-align:center;
+    font-size:50px;
+    margin-top:-40px;
+}
 
 .about-page-info{
     display: flex;
-    margin-left: 300px;
+    margin-left: 270px;
 }
 
 .about-page-info > span{
@@ -358,8 +429,8 @@ hr{
 #my-about-picture{
     width:200px;
     height:250px;
-    border-radius: 25%;
-    border:solid thick;
+    border-radius: 85px;
+    border: solid;
 }
 
 .about-links{
@@ -370,32 +441,94 @@ hr{
 }
 
 .about-links > .about-info:hover{
-    font-size:41px;
-    color: rgb(255, 255, 255);
+    font-size:31px;
+    color:#ecf572;
+    text-shadow: 2px 2px 2px black;
 }
 
 .about-info{
     margin:0;
     margin-bottom:20px;
-    color: rgb(255, 255, 255);
-    text-shadow: 3px 3px 1px black;
-    font-size:40px;
+    color: purple;
+    font-size:30px;
     padding-right: 25px;
 }
 
+.about-title{
+    text-align:center;
+    font-size:35px;
+}
+
 .bio{
-    width:70%;
-    margin-left:15%;
+    width:90%;
+    margin-left:5%;
     margin-top:30px;
-    background: rgb(255, 255, 255);
-    border-radius: 15%;
-    padding:20px;
 }
 
 .bio > p {
     font-weight: bold;
-    font-size: 35px;
-    text-align: center;
+    font-size: 25px;
+    text-align:center
+}
+
+.about-skills, .about-skills-header{
+    color:purple;
+    text-align:center;
+    font-size:40px;
+    margin:0;
+}
+
+.about-skills-header, .education > h2{
+    color:#ecf572;
+    text-shadow: 2px 2px 2px black;
+    text-align:center;
+    margin-left:5%;
+    font-size: 30px;
+}
+
+.skills, .education-list{
+    width:80%;
+    display: flex;
+    justify-content: space-between;
+    margin-left:10%;
+}
+
+.skills-list, .education{
+    margin-top:40px;
+    flex:1;
+    text-align:center
+}
+
+.skills-list > p{
+    font-weight:bold;
+    font-size:25px;
+}
+
+.no-margin-top{
+    margin-top:0;
+}
+
+.education-list{
+    margin-bottom: 40px;
+}
+
+.education{
+    margin-top:15px;
+}
+
+.education > h3{
+    font-size:23px;
+}
+
+.education > p {
+    color:purple;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.date, em{
+    color:black;
+    font-weight:normal;
 }
 
 
@@ -440,8 +573,8 @@ hr{
     }
 
     hr{
-        width:0%;
-        margin-left:0;
+        width:90%;
+        margin-left:5%;
         margin-right:0;
     }
 
@@ -568,6 +701,23 @@ hr{
 
     /* ABOUT PAGE */
 
+    .right-words, .left-words{
+        display:none;
+        opacity: 0;
+        pointer-events: none;
+        animation: none;
+    }
+
+    #about-page-content{
+        width:90%;
+        margin-left:5%;
+    }
+
+    .about-name{
+        position: absolute;
+        margin-top:-380px;
+    }
+
     .about-page-info{
         display: initial;
         margin-left: 0px;
@@ -583,11 +733,11 @@ hr{
         margin-left:3%;
         margin-bottom:0;
         text-align: center;
-        text-shadow: 2px 1px 1px black;
+        text-shadow: none;
     }
 
     #my-about-picture{
-        margin-top:30%;
+        margin-top:40%;
         margin-left:15%;
     }
 
@@ -601,5 +751,9 @@ hr{
 
     .bio > p {
         font-size: 22px;
+    }
+
+    .skills, .education-list{
+        display:block;
     }
 }
