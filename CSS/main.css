@@ -1,9 +1,8 @@
 body{
     height:100vh;
     width:100vw;
-    background: linear-gradient(228deg, #0063fb, #e876f3);
-    background-size: 400% 400%;
-    animation: fluctuate 18s ease-in-out infinite;
+    background: linear-gradient(228deg, #f83920, #ecf572);
+    background-size: 150% 150%;
 }
 
 nav{
@@ -18,7 +17,7 @@ ul{
 li{
     font-size:30px;
     padding-right: 45px;
-    color: rgb(219, 216, 216);
+    color: rgb(230, 230, 230);
     text-shadow: 4px 2px 1px black;
 }
 
@@ -33,7 +32,9 @@ a{
 }
 
 hr{
-    width:95%;
+    width:75%;
+    margin-top:50px;
+    border-color:black;
 }
 
 @keyframes fluctuate{
@@ -47,24 +48,32 @@ hr{
 }
 
 .page-header{
-    color: rgb(219, 216, 216);
+    color: rgb(255, 255, 255);
     text-shadow: 4px 2px 1px black; 
     font-size: 65px;
     margin: 0;
     margin-top: 15px;
+    margin-left: 250px;
 }
 
 .page-subheader{
     width: 300px;
     margin-top:20px;
     font-size: 35px;
-    margin-left: 610px;
+    margin-left: 420px;
+}
+
+.personal-info{
+    background: #17BEBB;
+    width: 60%;
+    margin-left: 20%;
+    border-radius:15px;
+    box-shadow: 2px 2px 2px black;
 }
 
 .info{
-    margin-left: 660px;
-    color: rgb(219, 216, 216);
-    text-shadow: 3px 3px 1px black;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 1px black;
     font-size:30px;
 }
 
@@ -75,45 +84,55 @@ hr{
 
 .info-tagline{
     width: 570px;
-    margin-left: 660px;
+    margin-left: 310px;
     color:black;
     text-shadow: none;
 }
 
 .info-email{
-    margin-left:670px;
+    margin-bottom:0;
+    margin-left:320px;
+}
+
+.info-links{
+    display: flex;
 }
 
 .info-linkedin{
-    margin-left: 650px;
+    margin-left: 400px;
 }
 
 .info-resume{
-    margin-left: 620px;
+    margin-left: 50px;
 }
 
 #my-picture{
     width:250px;
     height:300px;
-    border-radius: 50%;
     position: absolute;
-    margin-top:-50px;
-    margin-left:400px;
-    border: solid rgb(219, 216, 216);
+    margin-top:-120px;
+    margin-left:30px;
+    border: solid rgb(255, 255, 255);
 }
 
 .project-header{
-    color: rgb(219, 216, 216);
-    text-shadow: 4px 2px 1px black; 
-    font-size: 45px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 1px black; 
+    font-size: 55px;
 }
 
 .project{
-    width:70%;
-    margin-left: 15%;
-    display:flex;
+    width:80%;
+    margin-left: 10%;
     padding-top: 20px;
     padding-bottom: 80px;
+    display: flex;
+    margin-top:-20px;
+}
+
+#project-image{
+    width:700px;
+    height:500px;
 }
 
 .project-info{
@@ -128,17 +147,29 @@ hr{
 .project-links{
     margin:0;
     font-size:30px;
-    color: rgb(219, 216, 216);
-    text-shadow: 4px 2px 1px black; 
+    background: rgb(105, 252, 19);
+    box-shadow: 4px 2px 1px black; 
+    padding:5px;
+    border-radius:20px;
     text-align: center;
+}
+
+#project-name{
+    background:rgb(54, 238, 255);
+}
+
+.links{
+    display: flex;
+    justify-content:space-evenly;
+    margin-top:-10px;
 }
 
 .arrow{
     position:absolute;
     font-size:100px;
-    color:rgb(219, 216, 216);
-    text-shadow: 4px 2px 1px black;
-    margin-top:-300px;
+    color:rgb(255, 255, 255);
+    text-shadow: 2px 1px 1px black;
+    margin-top:-200px;
 }
 
 .arrow:hover{
@@ -146,39 +177,37 @@ hr{
 }
 
 #left-arrow{
-    margin-left:75px;
+    margin-left:880px;
 }
 
 #right-arrow{
-    margin-left:1250px;
+    margin-left:1200px;
 }
 
 .space-runner-image{
     background: url("../Assets/Images/space-runner/space-runner-1.png");
-    background-size: contain;
+    background-size: 120%;
     background-position: center; 
     background-repeat: no-repeat;
-    width:500px;
-    height:100%;
     animation: cycle 24s ease-in-out infinite;
 }
 
 @keyframes cycle{
     25%{
         background: url("../Assets/Images/space-runner/space-runner-2.png");
-        background-size: contain;
+        background-size: 105%;
         background-position: center; 
         background-repeat: no-repeat;
     }
     50%{
         background: url("../Assets/Images/space-runner/space-runner-3.png");
-        background-size: contain;
+        background-size: 105%;
         background-position: center; 
         background-repeat: no-repeat;
     }
     75%{
         background: url("../Assets/Images/space-runner/space-runner-4.png");
-        background-size: contain;
+        background-size: 105%;
         background-position: center; 
         background-repeat: no-repeat;
     }
@@ -186,54 +215,53 @@ hr{
 
 .ladybird-image{
     background: url("../Assets/Images/ladybird/ladybird-1.png");
-    background-size: contain;
+    background-size: 100%;
     background-position: center; 
     background-repeat: no-repeat;
-    width:500px;
-    height:100%;
     animation: cycle2 48s ease-in-out infinite;
+    margin-top:-20px;
 }
 
 @keyframes cycle2{
     20%{
         background: url("../Assets/Images/ladybird/ladybird-2.png");
-        background-size: contain;
+        background-size: 100%;
         background-position: center; 
         background-repeat: no-repeat;
     }
     30%{
         background: url("../Assets/Images/ladybird/ladybird-3.png");
-        background-size: contain;
+        background-size: 100%;
         background-position: center; 
         background-repeat: no-repeat;
     }
     40%{
         background: url("../Assets/Images/ladybird/ladybird-4.png");
-        background-size: contain;
+        background-size: 100%;
         background-position: center; 
         background-repeat: no-repeat;
     }
     50%{
         background: url("../Assets/Images/ladybird/ladybird-5.png");
-        background-size: contain;
+        background-size: 100%;
         background-position: center; 
         background-repeat: no-repeat;
     }
     60%{
         background: url("../Assets/Images/ladybird/ladybird-6.png");
-        background-size: contain;
+        background-size: 100%;
         background-position: center; 
         background-repeat: no-repeat;
     }
     70%{
         background: url("../Assets/Images/ladybird/ladybird-7.png");
-        background-size: contain;
+        background-size: 100%;
         background-position: center; 
         background-repeat: no-repeat;
     }
     80%{
         background: url("../Assets/Images/ladybird/ladybird-8.png");
-        background-size: contain;
+        background-size: 100%;
         background-position: center; 
         background-repeat: no-repeat;
     }
@@ -241,66 +269,65 @@ hr{
 
 .galactic-defender-image{
     background: url("../Assets/Images/galactic-defender/galactic-defender1.png");
-    background-size: contain;
+    background-size: 100%;
     background-position: center; 
     background-repeat: no-repeat;
-    width:500px;
-    height:100%;
     animation: cycle3 90s ease-in-out infinite;
+    margin-top:-20px;
 }
 
 @keyframes cycle3{
     20%{
         background: url("../Assets/Images/galactic-defender/galactic-defender2.png");
-        background-size: contain;
+        background-size: 100%;
         background-position: center; 
         background-repeat: no-repeat;
     }
     30%{
         background: url("../Assets/Images/galactic-defender/galactic-defender3.png");
-        background-size: contain;
+        background-size: 100%;
         background-position: center; 
         background-repeat: no-repeat;
     }
     40%{
         background: url("../Assets/Images/galactic-defender/galactic-defender4.png");
-        background-size: contain;
+        background-size: 100%;
         background-position: center; 
         background-repeat: no-repeat;
     }
     50%{
         background: url("../Assets/Images/galactic-defender/galactic-defender5.png");
-        background-size: contain;
+        background-size: 100%;
         background-position: center; 
         background-repeat: no-repeat;
     }
     60%{
         background: url("../Assets/Images/galactic-defender/galactic-defender6.png");
-        background-size: contain;
+        background-size: 100%;
         background-position: center; 
         background-repeat: no-repeat;
     }
     70%{
         background: url("../Assets/Images/galactic-defender/galactic-defender7.png");
-        background-size: contain;
+        background-size: 100%;
         background-position: center; 
         background-repeat: no-repeat;
     }
     80%{
         background: url("../Assets/Images/galactic-defender/galactic-defender8.png");
-        background-size: contain;
+        background-size: 100%;
         background-position: center; 
         background-repeat: no-repeat;
     }
     90%{
         background: url("../Assets/Images/galactic-defender/galactic-defender9.png");
-        background-size: contain;
+        background-size: 100%;
         background-position: center; 
         background-repeat: no-repeat;
     }
     100%{
         background: url("../Assets/Images/galactic-defender/galactic-defender10.png");
-        background-size: contain;
+        background-size: 100%;
         background-position: center; 
         background-repeat: no-repeat;
     }
@@ -330,22 +357,6 @@ hr{
     height:250px;
     border-radius: 25%;
     border:solid thick;
-    animation: toggleBorder linear 1s infinite;
-}
-
-@keyframes toggleBorder{
-    25%{
-        border-top-color:rgb(219, 216, 216);
-    }
-    50%{
-        border-right-color:rgb(219, 216, 216);
-    }
-    75%{
-        border-bottom-color:rgb(219, 216, 216);
-    }
-    100%{
-        border-left-color:rgb(219, 216, 216);
-    }
 }
 
 .about-links{
@@ -363,7 +374,7 @@ hr{
 .about-info{
     margin:0;
     margin-bottom:20px;
-    color: rgb(219, 216, 216);
+    color: rgb(255, 255, 255);
     text-shadow: 3px 3px 1px black;
     font-size:40px;
     padding-right: 25px;
@@ -373,7 +384,7 @@ hr{
     width:70%;
     margin-left:15%;
     margin-top:30px;
-    background: rgb(219, 216, 216);
+    background: rgb(255, 255, 255);
     border-radius: 15%;
     padding:20px;
 }
@@ -399,7 +410,7 @@ hr{
         left:0;
         right:0;
         margin-left:0;
-        background:rgb(219, 216, 216);
+        background:rgb(255, 255, 255);
         width:100%;
     }
 
@@ -486,7 +497,7 @@ hr{
         margin-top:265px;
         font-size: 33px;
         margin-left: 10px;
-        color:rgb(219, 216, 216);
+        color:rgb(255, 255, 255);
         text-shadow: 3px 1px 1px black;
     }
 
