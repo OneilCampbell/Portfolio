@@ -1,15 +1,15 @@
 body{
     height:100vh;
     width:100vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #homepage{
-    background: linear-gradient(228deg, #f83920, #ecf572);
-    background-size: 150% 150%;
+    background: #4d67a3;
 }
 
 nav{
-    margin-left:1100px;
+    margin-left:1150px;
 }
 
 ul{
@@ -19,13 +19,12 @@ ul{
 
 li{
     font-size:30px;
-    padding-right: 45px;
-    color: rgb(230, 230, 230);
-    text-shadow: 4px 2px 1px black;
+    padding-right: 25px;
+    color: rgb(255, 255, 255);
 }
 
 li:hover{
-    color: rgb(255, 255, 255);
+    color: #fffb00;
     font-size:33px;
 }
 
@@ -45,8 +44,6 @@ hr{
 }
 
 .page-header{
-    color: rgb(255, 255, 255);
-    text-shadow: 4px 2px 1px black; 
     font-size: 65px;
     margin: 0;
     margin-top: 15px;
@@ -61,7 +58,7 @@ hr{
 }
 
 .personal-info{
-    background: #17BEBB;
+    background: rgb(5, 165, 240);
     width: 60%;
     margin-left: 20%;
     border-radius:15px;
@@ -70,7 +67,6 @@ hr{
 
 .info{
     color: rgb(255, 255, 255);
-    text-shadow: 2px 2px 1px black;
     font-size:30px;
 }
 
@@ -87,6 +83,7 @@ hr{
 }
 
 .info-email{
+    color:black;
     margin-bottom:0;
     margin-left:320px;
 }
@@ -103,18 +100,19 @@ hr{
     margin-left: 50px;
 }
 
+.info-linkedin:hover, .info-resume:hover{
+    color:#fffb00;
+}
+
 #my-picture{
     width:250px;
     height:300px;
     position: absolute;
     margin-top:-120px;
     margin-left:30px;
-    border: solid rgb(255, 255, 255);
 }
 
 .project-header{
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 2px 1px black; 
     font-size: 55px;
 }
 
@@ -144,15 +142,15 @@ hr{
 .project-links{
     margin:0;
     font-size:30px;
-    background: rgb(105, 252, 19);
+    background: #ecf572;
     box-shadow: 4px 2px 1px black; 
     padding:5px;
     border-radius:20px;
     text-align: center;
 }
 
-#project-name{
-    background:rgb(54, 238, 255);
+.project-links:hover{
+    background:#f83920;
 }
 
 .links{
@@ -171,6 +169,7 @@ hr{
 
 .arrow:hover{
     cursor: pointer;
+    color:#f83920;
 }
 
 #left-arrow{
