@@ -17,7 +17,7 @@ const deployedLinks = [
 const githubLinks = [
   "https://git.generalassemb.ly/OneilCampbell/Space-Runner",
   "https://git.generalassemb.ly/brianogilvie/ladybird",
-  "#"
+  "https://git.generalassemb.ly/OneilCampbell/Galactic-Defender"
 ];
 
 const projectNames = ["Space Runner", "Ladybird", "Galactic Defender"];
