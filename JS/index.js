@@ -1,55 +1,105 @@
-const $deployedPictureLink = document.querySelector("#deployed-link-picture");
-const $deployedHeaderLink = document.querySelector("#deployed-link-heading");
-const $githubLink = document.querySelector("#github-link");
-const $projectImage = document.querySelector("#project-image");
-const $projectName = document.querySelector("#project-name");
-const $projectDescription = document.querySelector("#project-description");
-
-const $leftArrow = document.querySelector("#left-arrow"); 
-const $rightArrow = document.querySelector("#right-arrow");
 
 const deployedLinks = [
+  "https://combat-colosseum.herokuapp.com/",
   "https://pages.git.generalassemb.ly/OneilCampbell/Space-Runner/",
   "https://ladybird-app.herokuapp.com/",
+  "hushed-structure.surge.sh",
   "https://mystifying-bardeen-decc3c.netlify.com"
 ];
 
 const githubLinks = [
-  "https://git.generalassemb.ly/OneilCampbell/Space-Runner",
-  "https://git.generalassemb.ly/brianogilvie/ladybird",
-  "https://git.generalassemb.ly/OneilCampbell/Galactic-Defender"
+  "https://github.com/OneilCampbell/Combat-Colosseum",
+  "https://github.com/OneilCampbell/Space-Runner",
+  "https://github.com/OneilCampbell/Ladybird",
+  "https://github.com/OneilCampbell/The-More-You-Know",
+  "https://github.com/OneilCampbell/Galactic-Defender"
 ];
 
-const projectNames = ["Space Runner", "Ladybird", "Galactic Defender"];
+const projectNames = ["Combat Colosseum", "Space Runner", "Ladybird", "The More You Know", "Galactic Defender"];
+
+const projectImages = [
+  "./Assets/Images/combat-colosseum/combat-colosseum.png",
+  "./Assets/Images/space-runner/space-runner-1.png", 
+  "./Assets/Images/ladybird/ladybird-1.png", 
+  "./Assets/images/the-more-you-know/the-more-you-know.png",
+  "./Assets/Images/galactic-defender/galactic-defender1.png"
+];
 
 const projectDescriptions = [
-    "Side scrolling game where the player must avoid asteroids and collect items for points. For every asteroid the player collides with, they suffer an amount of damage indicated onscreen. If the player collides with too many asteroids then they lose.Alternatively, if the player reaches 1000 points, then they win the game.",
-    "Collaboration with other developers and a UX team to re-design and revamp a restaurant's promotional website. Implemented a single page scrolling design with sticky navigation, and a database to store all information on the menu items so that they can be dynamically rendered. Includes secure, non-client-facing sign in for the chef to update the menu",
-    "Promotional website for an online game, where the user is immersed into an engaging experience as they explore the lore of the game. The user is presented with the history in the world of the game, as well as the setup to the plot of the game. Then the user is introduced to all of the characters, both heroes and villains and invited to join the fight"
+  "Arcade style fighting game, where the player can choose from a variety of characters and see how long they can last in the arena.",
+  "2D Side scrolling game where the player must navigate a spaceship to avoid asteroids and collect different kinds of items for points.",
+  "Collaboration with fellow developers and a team of UX designers to revamp and re-design a NYC restaurant's promotional website.",
+  "Trivia game where players can guess the answers to random bits of trivia, guess the punchline to jokes, or match a flag to its country",
+  "Promotional website for an online game, where the user is immersed into an engaging experience as they explore the lore of the game."
 ];
 
-const projectClasses = ["space-runner-image", "ladybird-image", "galactic-defender-image"];
+const projectTech = ["React-Router, Express, Sequelize, PostgreSQL", "HTML, CSS, JavaScript, jQuery", "React, Express, Sequelize, PostgreSQL", "React, Javascript, APIs, Axios", "HTML, CSS, JavaScript, jQuery"];
 
-let prevIndex;
+
 let currentIndex = 0;
 
-const updateInfo = () => {
-    $deployedPictureLink.href = $deployedHeaderLink.href = deployedLinks[currentIndex];
-    $githubLink.href = githubLinks[currentIndex];
-    $projectImage.classList.remove(projectClasses[prevIndex]);
-    $projectImage.classList.add(projectClasses[currentIndex]);
-    $projectName.innerHTML = projectNames[currentIndex];
-    $projectDescription.innerHTML = projectDescriptions[currentIndex]
+const elementsCreation = (elemnt, clss) => {
+  let tempElm = document.createElement(elemnt);
+  tempElm.classList.add(clss);
+  return tempElm;
 }
 
-$leftArrow.addEventListener("click", () => {
-    prevIndex = currentIndex;
-    currentIndex = currentIndex === 0 ? projectNames.length - 1 : currentIndex - 1;
-    updateInfo();
-})
+const appendChildren = (parent, children) => {
+  for(child of children){
+    parent.appendChild(child);
+  }
+}
 
-$rightArrow.addEventListener("click", () => {
-    prevIndex = currentIndex;
-    currentIndex = currentIndex === projectNames.length - 1 ? 0 : currentIndex + 1;
-    updateInfo();    
-})
+const handleCardFront = cardFront => {
+  let title = elementsCreation("h3", "project-title");
+  title.innerHTML = projectNames[currentIndex];
+  let image = elementsCreation("img", "project-image");
+  image.src = projectImages[currentIndex];
+  let techUsed = elementsCreation("p", "project-tech");
+  techUsed.innerHTML = projectTech[currentIndex];
+  appendChildren(cardFront, [title, image, techUsed]);
+}
+
+const handleCardBack = cardBack => {
+  let descr = elementsCreation("p", "project-description");
+  descr.innerHTML = projectDescriptions[currentIndex];
+
+  let button = elementsCreation("div", "project-button");
+  let git = elementsCreation("a", "project-link");
+  git.href = githubLinks[currentIndex];
+  git.textContent = "Github";
+  button.appendChild(git);
+
+  let button2 = elementsCreation("div", "project-button");
+  let deploy = elementsCreation("a", "project-link");
+  deploy.href = deployedLinks[currentIndex];
+  deploy.textContent = "Project";
+  button2.appendChild(deploy);
+
+  let links = elementsCreation("div", "all-project-links");
+  appendChildren(links, [button2, button]);
+
+  appendChildren(cardBack, [descr, links]);
+}
+
+const createProjectDivs = () => {
+  let allProjects = elementsCreation("div", "all-projects"); 
+  for(project of projectNames){
+    let container = elementsCreation("div", "card-container");
+    let card = elementsCreation("div", "project-card");
+    let front = elementsCreation("div", "card-front");
+    let back = elementsCreation("div", "card-back");
+
+    handleCardFront(front);
+    handleCardBack(back);
+
+    appendChildren(card, [front, back]);
+    container.appendChild(card);
+    allProjects.appendChild(container);
+
+    currentIndex++;
+  }
+  document.body.appendChild(allProjects);
+}
+
+createProjectDivs();
