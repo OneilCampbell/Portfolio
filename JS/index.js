@@ -3,6 +3,7 @@ const deployedLinks = [
   "https://combat-colosseum.herokuapp.com/",
   "https://pages.git.generalassemb.ly/OneilCampbell/Space-Runner/",
   "https://ladybird-app.herokuapp.com/",
+  "https://dream-team-socialite.herokuapp.com/",
   "hushed-structure.surge.sh",
   "https://mystifying-bardeen-decc3c.netlify.com"
 ];
@@ -11,16 +12,18 @@ const githubLinks = [
   "https://github.com/OneilCampbell/Combat-Colosseum",
   "https://github.com/OneilCampbell/Space-Runner",
   "https://github.com/OneilCampbell/Ladybird",
+  "https://github.com/OneilCampbell/Socialite",
   "https://github.com/OneilCampbell/The-More-You-Know",
   "https://github.com/OneilCampbell/Galactic-Defender"
 ];
 
-const projectNames = ["Combat Colosseum", "Space Runner", "Ladybird", "The More You Know", "Galactic Defender"];
+const projectNames = ["Combat Colosseum", "Space Runner", "Ladybird", "Socialite", "The More You Know", "Galactic Defender"];
 
 const projectImages = [
   "./Assets/Images/combat-colosseum/combat-colosseum.png",
   "./Assets/Images/space-runner/space-runner-1.png", 
   "./Assets/Images/ladybird/ladybird-1.png", 
+  "./Assets/Images/socialite/socialite.png",
   "./Assets/images/the-more-you-know/the-more-you-know.png",
   "./Assets/Images/galactic-defender/galactic-defender1.png"
 ];
@@ -29,11 +32,12 @@ const projectDescriptions = [
   "Arcade style fighting game, where the player can choose from a variety of characters and see how long they can last in the arena.",
   "2D Side scrolling game where the player must navigate a spaceship to avoid asteroids and collect different kinds of items for points.",
   "Collaboration with fellow developers and a team of UX designers to revamp and re-design a NYC restaurant's promotional website.",
-  "Trivia game where players can guess the answers to random bits of trivia, guess the punchline to jokes, or match a flag to its country",
+  "Collaborated with other developers to create our own socializing app. Inspired by Twitter, this CRUD app is for the social butterflies.",
+  "Trivia game where players can guess the answers to random bits of trivia, guess the punchline to jokes, or match a flag to its country.",
   "Promotional website for an online game, where the user is immersed into an engaging experience as they explore the lore of the game."
 ];
 
-const projectTech = ["React-Router, Express, Sequelize, PostgreSQL", "HTML, CSS, JavaScript, jQuery", "React, Express, Sequelize, PostgreSQL", "React, Javascript, APIs, Axios", "HTML, CSS, JavaScript, jQuery"];
+const projectTech = ["React-Router, Express, Sequelize, PostgreSQL", "HTML, CSS, JavaScript, jQuery", "React, Express, Sequelize, PostgreSQL", "React-Router, Bootstrap, Bulma, PostgreSQL", "React, Javascript, APIs, Axios", "HTML, CSS, JavaScript, jQuery"];
 
 
 let currentIndex = 0;
