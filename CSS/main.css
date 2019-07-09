@@ -194,7 +194,7 @@ hr{
     -ms-perspective: 500px;
     -o-perspective: 500px;
     perspective: 500px;
-    
+
     margin-bottom: 50px;
 }
 
@@ -268,6 +268,8 @@ hr{
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ****************************************************************/
+
+
 #about-page{
     background:#4d67a3;
 }
@@ -408,12 +410,18 @@ hr{
 }
 
 
+/**************************************************************** 
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+~~~~~~~~~~~~~~~~~~~~~~~~ MEDIA QUERIES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+****************************************************************/
+
 
 @media only screen and (max-width: 600px){
     #homepage{
-        background: linear-gradient(180deg, #fffd89, #ff0000);
-        background-size: 110% 110%;
-        background-repeat: no-repeat;
+        background: #4d67a3;
         height:100%;
     }
 
@@ -424,13 +432,13 @@ hr{
         left:0;
         right:0;
         margin-left:0;
-        background:rgb(255, 255, 255);
+        background:#ecf572;
         width:100%;
     }
 
     ul{
         margin-bottom:0;
-        margin-left:5%;
+        margin-left:20%;
         padding-bottom:2%;
         padding-top:2%;
     }
@@ -462,7 +470,7 @@ hr{
 
     .info{
         text-align: center;
-        font-size:25px;
+        font-size:21px;
     }
 
     .info-tagline{
@@ -475,8 +483,7 @@ hr{
     .info-email{
         margin-left:0px;
         margin-bottom:0px;
-        font-size: 22px;
-        text-shadow: 3px 2px 1px black; 
+        font-size: 21px;
     }
 
     .info-links{
@@ -484,14 +491,8 @@ hr{
         justify-content: space-evenly;
     }
 
-    .info-linkedin{
+    .info-linkedin, .info-resume, .info-github{
         margin-left: 0px;
-        text-shadow: 3px 2px 1px black; 
-    }
-
-    .info-resume{
-        margin-left: 0px;
-        text-shadow: 3px 2px 1px black; 
     }
 
     #my-picture{
@@ -516,7 +517,6 @@ hr{
         font-size: 30px;
         margin-left: 10px;
         color:rgb(255, 255, 255);
-        text-shadow: 3px 1px 1px black;
     }
 
     .project-header{
@@ -560,20 +560,6 @@ hr{
         margin-right:25px;
     }
 
-    .arrow{
-        position:absolute;
-        font-size:60px;
-        margin-top:-525px;
-        height:50px;
-    }
-
-    #left-arrow{
-        margin-left:50px;
-    }
-
-    #right-arrow{
-        margin-left:210px;
-    }
 
     /* ABOUT PAGE */
 
