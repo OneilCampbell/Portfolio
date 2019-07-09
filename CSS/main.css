@@ -186,30 +186,77 @@ hr{
 }
 
 .card-container {
+    -webkit-perspective: 500px;
+    -webkit-perspective: 500px;
+    -webkit-perspective: 500px;
+    -webkit-perspective: 500px;
+    -moz-perspective: 500px;
+    -ms-perspective: 500px;
+    -o-perspective: 500px;
     perspective: 500px;
+    
     margin-bottom: 50px;
 }
 
 .card-container:hover .project-card{
+   -webkit-transform: rotateY( 180deg );
+   -webkit-transform: rotateY( 180deg );
+   -webkit-transform: rotateY( 180deg );
+   -webkit-transform: rotateY( 180deg );
+   -moz-transform: rotateY( 180deg );
+   -ms-transform: rotateY( 180deg );
+   -o-transform: rotateY( 180deg );
    transform: rotateY( 180deg );
 }
 
 .project-card {
     background: rgb(5, 165, 240);
     box-shadow: 2px 2px 11px black;
+
+    -webkit-transition: transform 0.7s;
+    -webkit-transition: transform 0.7s;
+    -webkit-transition: transform 0.7s;
+    -webkit-transition: transform 0.7s;
+    -moz-transition: transform 0.7s;
+    -ms-transition: transform 0.7s;
+    -o-transition: transform 0.7s;
     transition: transform 0.7s;
+
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
     transform-style: preserve-3d;
+
     width: 300px;
     height: 300px;
 }
 
 .card-front, .card-back {
+    -webkit-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
     backface-visibility: hidden;
+
     position: absolute;
     width: 100%;
 }
 
 .card-back {
+   -webkit-transform: rotateY( 180deg );
+   -webkit-transform: rotateY( 180deg );
+   -webkit-transform: rotateY( 180deg );
+   -webkit-transform: rotateY( 180deg );
+   -moz-transform: rotateY( 180deg );
+   -ms-transform: rotateY( 180deg );
+   -o-transform: rotateY( 180deg );
    transform: rotateY( 180deg );
 }
 
